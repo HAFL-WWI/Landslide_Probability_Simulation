@@ -1,0 +1,2 @@
+# Optimisation and application of a high-resolution shallow landslide model at regional scale (2025) publication code 
+Repository with code and data for the publication on predicting shallow landslide occurence probability at regional scale in the canton of Bern, Switzerland, based on slope stability simulations with the SlideforMAP model. See the readme files in the individual folders for details.
