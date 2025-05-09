@@ -1,0 +1,116 @@
+# Path to DEM Raster | Type: TEXT:FILE
+demPath = ""
+
+# Path to flow accumulation Raster | Type: TEXT:FILE
+flowAccPath = ""
+
+# Path to soil type Raster | Type: TEXT
+soilTypeRaster = ""
+
+# Path to the Physical Properties CSV | Type: TEXT:FILE
+physPropCSV = ""
+
+# Path to soil thickness values raster. Leave empty if not available | Type: TEXT
+soilThicknessValueRaster = ""
+
+soilThicknessSDPercent = 0
+
+# Path to soil thickness types raster. Leave empty if not available | Type: TEXT
+soilThicknessTypeRaster = ""
+
+# Path to soil thickness CSV | Type: TEXT
+soilThicknessCSV = ""
+
+# Path to land use raster. Leave empty if not available | Type: TEXT
+landUseRaster = ""
+
+# Path to land use CSV. Leave empty if land use raster not used | Type: TEXT
+landUseCSV = ""
+
+# Partial data (1) or full data (2) | Type: TEXT
+treeFileFormat = "1"
+
+# Path to the tree data set | Type: TEXT
+treeFilePath = "none"
+
+# Name of tree species | Type: TEXT
+treeSpecies = "Fagus sylvatica"
+
+# Value of constant lateral root reinforcement [N/m] | Type: FLOAT
+constantLateralRR = 0
+
+# Path to output directory | Type: TEXT
+outputPath = ""
+
+# File extension for output rasters | Type: TEXT
+outputExtension = ".tif"
+
+# 0 no output; 1 output raster | Type: BOOLEAN
+outputTreeWeight = 0
+
+# 0 no output; 1 output raster | Type: BOOLEAN
+outputSlope = 0
+
+# Rainfall rate [mm/hr] | Type: FLOAT
+rainfall = 0.5633
+
+# Minimum landslide area [m^2] | Type: FLOAT
+minLandslideArea = 10
+
+# Maximum landslide area [m^2] | Type: FLOAT
+maxLandslideArea = 2600
+
+# Export landslide data to file | Type: BOOLEAN
+exportLandslides = 1
+
+# Compute safety factor with soil compression | Type: BOOLEAN
+safetyFactorWithSoilCompression = 1
+
+# Compute large wood recruitment | Type: BOOLEAN
+runLargeWoodModel = 0
+
+# Compute sediment recruitment | Type: BOOLEAN
+runSedimentModel = 0
+
+# Half width over which to average landslide for raster creation (cells) [m] | Type: UINT
+rasterizerWidth = 4
+
+# Number of landslides per square meter | Type: FLOAT
+landslideDensity = 1.0
+
+# Maximum distance from landslide to stream for runout [m] | Type: FLOAT
+streamSearchDistance = 200
+
+# Minimum value of catchment area for stream search [m^2] | Type: FLOAT
+catchmentAreaThreshold = 50000
+
+# Search radius to find nearby trees of raster cell [m] | Type: FLOAT
+treeSearchRadius = 7
+
+# Threshold slope above which soil cohesion is set to 100 kPa [deg] | Type: FLOAT
+slopeThreshold = 50
+
+# Value of angle used in Weibull distribution (scale factor) [deg] | Type: FLOAT
+runoutAngle = 23
+
+# Fraction of soil thickness that is water saturated [-] | Type: FLOAT
+saturatedThicknessFraction = -1
+
+# Passive earth pressure correction in [%] | Type: FLOAT
+passiveEarthPressureCorrection = 30
+
+# Rainfall rate correction factor for small landslides. Set to 1 for no correction [-] | Type: FLOAT
+rainCorrectionFactor = 1
+
+# Upper threshold catchment area for rainfall correction [m^2] | Type: FLOAT
+rainCatchmentAreaThreshold = 1000
+
+# Landslide area inverse Gamma distribution shape factor [-] (Malamud et al, 2004, "Landlisde inventories and their statistical properties", Eq (3) variable rho) | Type: FLOAT
+invGammaShape = 0.7847075941001315
+
+# Landslide area inverse Gamma distribution scale factor [km^2] (Malamud et al, 2004, Eq (3) variable a | Type: FLOAT
+invGammaScale = 0.00017046038819818816
+
+# Landslide area inverse Gamma distribution s parameter [km^2] (Malamud et al, 2004, Eq (3) variable s | Type: FLOAT
+invGammaS = 2.1182630914942035e-30
+
