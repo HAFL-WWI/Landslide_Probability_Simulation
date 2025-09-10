@@ -35,7 +35,7 @@ import geopandas as gpd
 
 import rasterstats
 
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, roc_curve
 
 # Function to ensure that a directory exists
 def ensure_dir (path):
@@ -304,6 +304,20 @@ def generate_results(output_folder,sim_folder, perimeter_path,ps_layer, slide_la
 
         writer.writerow(["sim","auc"] )    
         writer.writerow([output_name, auc])  
+
+    # Determine AUC curve values
+    fpr, tpr, _ = roc_curve(slide_actual,slide_prediction)
+
+    comb_crv_path = os.path.join(sim_path,"auc_all_crv_{0}.csv".format(variant["name"]))
+    if os.path.exists(comb_crv_path):
+        os.remove(comb_crv_path)
+
+    with open(comb_crv_path, "w") as file:
+        writer = csv.writer(file, delimiter=",")
+
+        writer.writerow(["sim","fpr","tpr"] )  
+        for l in range(len(fpr)): 
+            writer.writerow([output_name, fpr[l], tpr[l] ])
 
     # Determine probability per slide
     slide_df = gpd.read_file(perimeter_path,layer=slide_layer, engine="pyogrio", fid_as_index=True)
